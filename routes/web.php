@@ -25,8 +25,10 @@ Route::get(
 
 Route::get(
     '/notes/{note}', function ($id) {
-        $title = "Note {$id}";
-        $text = "This is note {$id}";
-        return view('note', ['title' => $title, 'text' => $text]);
+        // $title = "Note {$id}";
+        // $text = "This is note {$id}";
+        $note = Note::find($id);
+
+        return view('note', $note);
     }
 );
