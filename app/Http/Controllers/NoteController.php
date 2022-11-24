@@ -71,4 +71,14 @@ class NoteController extends Controller
         //redirecting back to the notes page
         return redirect("/notes/{$note->id}");
     }
+
+    public function destroy($id)
+    {
+        $note = Note::find($id);
+        $note->delete();
+
+        return redirect('/');
+
+
+    }
 }
