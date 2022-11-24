@@ -7,14 +7,15 @@ use App\Models\Note;
 
 class NoteController extends Controller
 {
-    public function index () {
+    public function index()
+    {
         $title = "Notes";
         $search = request('search');
 
         if ($search) {
             $notes = Note::where('title', 'like', "%{$search}%")
-                        ->orWhere('text', 'like', "%{$search}%")
-                        ->get();
+                ->orWhere('text', 'like', "%{$search}%")
+                ->get();
         } else {
             $notes = Note::all();
         }
@@ -22,8 +23,15 @@ class NoteController extends Controller
         return view('notes', ['title' => $title, 'notes' => $notes]);
     }
 
-    public function show ($id) {
+    public function show($id)
+    {
         $note = Note::find($id);
         return view('note', $note);
+    }
+
+    public function create()
+    {
+        //display the create form
+        return view('create', ['title' => 'Add Note']);
     }
 }
