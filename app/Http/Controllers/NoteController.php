@@ -34,4 +34,17 @@ class NoteController extends Controller
         //display the create form
         return view('create', ['title' => 'Add Note']);
     }
+
+    public function store()
+    {
+        $note = new Note();
+        $note->title = request('title'); //$_POST
+        $note->text = request('text');
+        //store to database
+        $note->save();
+
+        //redirect the user to created a note page
+        return redirect("/notes/{$note->id}");
+
+    }
 }
