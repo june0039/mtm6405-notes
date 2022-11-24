@@ -5,7 +5,7 @@
   <h1 class="display-4 my-5">{{ $title }}</h1>
   </div>
   <div class="col-3">
-   <a href="" class="text-decoration-none text-body">New</a>
+   <a href="/create" class="text-decoration-none text-body">New</a>
     </div>
    </div>
 
