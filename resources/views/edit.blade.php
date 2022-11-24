@@ -21,6 +21,14 @@
 
    </div>
    </form>
+
+   <form action="/notes/{{$note['id']}}" method="POST" class="d-flex justify-content-center">
+@csrf
+@method('DELETE')
+
+<button class="btn btn-outline-danger">Delete Note</button>
+
+   </form>
    </div>
   </div>
 </x-layout>
