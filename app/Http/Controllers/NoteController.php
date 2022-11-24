@@ -47,4 +47,12 @@ class NoteController extends Controller
         return redirect("/notes/{$note->id}");
 
     }
+
+    public function edit($id)
+    {
+        $note = Note::find($id);
+        $title = 'Edit Note';
+
+        return view('edit', ['title' => $title, 'note' => $note]);
+    }
 }

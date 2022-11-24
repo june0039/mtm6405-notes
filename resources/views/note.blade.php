@@ -4,10 +4,11 @@
   <div class="col-9">
 
   <h1 class="display-4 my-5">{{ $title }}</h1>
-  </div>
+   </div>
+
   <div class="col-3">
    <a href="/notes/{{$id}}/edit" class="text-decoration-none text-body">Edit</a>
-   </div>
+    </div>
    </div>
 
   <p class="fs-4">{{ $text }}</p>
