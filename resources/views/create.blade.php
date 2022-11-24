@@ -11,7 +11,7 @@
    <input type="text"class="form-control mb-3" name="title">
 
    <label for="text" class="form-label">Text</label>
-   <textarea class="form-control mb-3" name"text"></textarea>
+   <textarea class="form-control mb-3" name="text"></textarea>
 
    <div class="align-self-end">
    <a href="/" class="btn btn-secondary">Cancel</a>
