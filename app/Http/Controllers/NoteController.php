@@ -55,4 +55,20 @@ class NoteController extends Controller
 
         return view('edit', ['title' => $title, 'note' => $note]);
     }
+
+    public function update($id)
+    {
+        //getting the note from db
+        $note = Note::find($id);
+
+        //updating the note properties
+        $note->title = request('title');
+        $note->text = request('text');
+
+        //saves updates to db
+        $note->save();
+
+        //redirecting back to the notes page
+        return redirect("/notes/{$note->id}");
+    }
 }
