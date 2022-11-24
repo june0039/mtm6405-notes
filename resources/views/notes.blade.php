@@ -1,6 +1,14 @@
 <x-layout>
   <x-slot name="title">{{ $title }}</x-slot>
+  <div class="row">
+  <div class="col-9">
   <h1 class="display-4 my-5">{{ $title }}</h1>
+  </div>
+  <div class="col-3">
+   <a href="" class="text-decoration-none text-body">New</a>
+    </div>
+   </div>
+
   <div class="row">
     <div class="col">
       <form class="form mb-3">

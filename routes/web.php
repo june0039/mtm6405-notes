@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Note;
 use App\Http\Controllers\NoteController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,5 +16,5 @@ use App\Http\Controllers\NoteController;
 */
 
 Route::get('/', [NoteController::class, 'index']);
-
+Route::get('/create', [NoteController::class, 'create']);
 Route::get('/notes/{note}', [NoteController::class, 'show']);
