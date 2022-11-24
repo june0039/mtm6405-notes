@@ -6,6 +6,7 @@
    <!-- form has two defaults action(itself-/create)/method (get)-->
 
 <form action="/" method="POST" class="form mb-3 d-flex-column bg-light p-5">
+@csrf
    <label for="title" class="form-label">Title</label>
    <input type="text"class="form-control mb-3" name="title">
 
